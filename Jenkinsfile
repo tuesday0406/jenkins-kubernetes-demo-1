@@ -9,7 +9,7 @@ pipeline {
         stage('Deploy Frontend') {
             steps {
                 sh "kubectl apply -f frontend.yaml"
-                sh "sleep svc -w"
+                sh "sleep 50"
                 sh "kubectl get svc frontend"
             }
         }
